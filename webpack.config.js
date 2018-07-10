@@ -9,7 +9,7 @@ module.exports = {
   output: {
     path,
     filename: 'bundle.[hash].js',
-    publicPath: '.'
+    publicPath: '/'
   },
   devServer: {
     contentBase: `./${buildDir}`,
@@ -61,7 +61,7 @@ module.exports = {
         loader: 'eslint-loader'
       },
       {
-        test: /\.(jpg|png|svg)$/,
+        test: /\.(jpg|png|svg|ico)$/,
         use: {
           loader: 'url-loader',
           options: { limit: 5000 }
@@ -69,5 +69,4 @@ module.exports = {
       }
     ]
   }
-
-}
+};
