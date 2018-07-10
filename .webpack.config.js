@@ -49,11 +49,23 @@ module.exports = {
             }
           },
           {
-            loader: 'postcss',
-
+            loader: 'postcss-loader',
+            options: { sourceMap: true }
           }
-
         ]
+      },
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader'
+      },
+      {
+        test: /\.(jpg|png|svg)$/,
+        use: {
+          loader: 'url-loader',
+          options: { limit: 5000 }
+        }
       }
     ]
   }
