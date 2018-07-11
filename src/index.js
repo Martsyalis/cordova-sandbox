@@ -4,7 +4,6 @@ import App from './App';
 
 
 function startApp() {
-  console.log('startApp is running.');
   ReactDOM.render(
     <App/>,
     document.getElementById('root')
@@ -16,3 +15,4 @@ if(window.cordova) {
 } else {
   startApp();
 }
+
