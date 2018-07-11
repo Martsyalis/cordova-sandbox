@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import Gallery from './Gallery';
 import Feedback from './Feedback';
@@ -14,11 +15,16 @@ import icon from './assets/icon.ico';
 const imageArray = [giantJpeg, giantPng, giantSvg, largeJpeg, largePng, smallJpg, smallPng, icon];
 
 export default class Routes extends PureComponent {
+  static propTypes = {
+    history : PropTypes.object.isRe
+  }
+
   componentDidMount() {
     if(!window.cordova) return;
     window.FirebasePlugin.onNotificationOpen(notification => {
       console.log('notification is', notification);
-    })
+      this.props.history.push('/feedback/get');
+    });
   }
 
   render() {
@@ -26,6 +32,7 @@ export default class Routes extends PureComponent {
       <Switch>
         <Route path="/gallery" render={() => <Gallery imageArray={imageArray} />} />
         <Route path="/feedback" component={Feedback} />
+        <Redirect to='/gallery' />
       </Switch>
     );
   }

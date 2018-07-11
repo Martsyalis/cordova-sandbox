@@ -11,8 +11,9 @@ export default class App extends PureComponent {
 
   handleGetToken = () => {
     // send token to the db
-    // window.FirebasePlugin.getToken(token => {
-    // });
+    window.FirebasePlugin.getToken(token => {
+      console.log('token is', token);
+    });
   };
 
   render() {
