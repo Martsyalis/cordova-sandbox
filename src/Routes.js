@@ -16,8 +16,8 @@ const imageArray = [giantJpeg, giantPng, giantSvg, largeJpeg, largePng, smallJpg
 
 class Routes extends PureComponent {
   static propTypes = {
-    history : PropTypes.object.isRe
-  }
+    history : PropTypes.object
+  };
 
   componentDidMount() {
     if(!window.cordova) return;
