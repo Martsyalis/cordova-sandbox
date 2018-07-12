@@ -8,8 +8,7 @@ module.exports = {
   entry:'./src/index.js',
   output: {
     path,
-    filename: 'bundle.[hash].js',
-    publicPath: ''
+    filename: 'bundle.[hash].js'
   },
   devServer: {
     contentBase: `./${buildDir}`,

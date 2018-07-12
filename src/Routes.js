@@ -1,8 +1,8 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
 import Gallery from './Gallery';
-import Feedback from './Feedback';
+import ImageUploader from './ImageUploader';
 import giantJpeg from './assets/giant.jpg';
 import giantPng from './assets/giant.png';
 import giantSvg from './assets/giant.svg';
@@ -14,7 +14,7 @@ import icon from './assets/icon.ico';
 
 const imageArray = [giantJpeg, giantPng, giantSvg, largeJpeg, largePng, smallJpg, smallPng, icon];
 
-export default class Routes extends PureComponent {
+class Routes extends PureComponent {
   static propTypes = {
     history : PropTypes.object.isRe
   }
@@ -31,9 +31,11 @@ export default class Routes extends PureComponent {
     return (
       <Switch>
         <Route path="/gallery" render={() => <Gallery imageArray={imageArray} />} />
-        <Route path="/feedback" component={Feedback} />
-        <Redirect to='/gallery' />
+        <Route path="/imageUploader" component={ImageUploader} />
+        <Redirect to='/imageUploader' />
       </Switch>
     );
   }
 }
+
+export default withRouter(Routes);
