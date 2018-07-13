@@ -5,7 +5,7 @@ import App from './components/App';
 
 function startApp() {
   if(window.cordova){
-    window.open = cordova.InAppBrowser.open;
+    window.openInAppBrowser = cordova.InAppBrowser.open;
   }
   ReactDOM.render(
     <App/>,

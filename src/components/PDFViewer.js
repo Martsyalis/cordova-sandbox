@@ -2,14 +2,20 @@ import React, { PureComponent } from 'react';
 
 export default class PDFViewer extends PureComponent{
 
-  handleClick = ()=>{
-    window.open('https://english.duke.edu/sites/english.duke.edu/files/file-attachments/Ulysses%20by%20Alfred,%20Lord%20Tennyson%20-%20The%20Poetry%20Foundation.pdf', '_blank', 'enableViewportScale=yes');
+  openInAppBrowser = ()=>{
+    // enableViewPort is ios only
+    window.openInAppBrowser('https://www.antennahouse.com/XSLsample/pdf/sample-link_1.pdf', '_blank', 'location=no,enableViewportScale=yes');
+  };
+  openSystemBrowser = ()=>{
+    // enableViewPort is ios only
+    window.open('https://www.antennahouse.com/XSLsample/pdf/sample-link_1.pdf');
   };
   
   render(){
     return (
       <div>
-        <button onClick={this.handleClick}>Blank</button>
+        <button onClick={this.openInAppBrowser}>In App Browser</button>
+        <button onClick={this.openSystemBrowser}>Native </button>
       </div>
     );
   }
