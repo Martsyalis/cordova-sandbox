@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { HashRouter as Router } from 'react-router-dom';
+import { HashRouter /* BrowserRouter */ as Router } from 'react-router-dom';
 import Routes from './Routes';
 import './App.css';
 

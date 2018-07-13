@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { withRouter } from 'react-router-dom';
 import './ImageUploader.css';
 
-class ImageUpload extends PureComponent {
+class ImageUploader extends PureComponent {
 
   render() {
     return (
@@ -16,4 +16,4 @@ class ImageUpload extends PureComponent {
   }
 }
 
-export default withRouter(ImageUpload);
+export default withRouter(ImageUploader);
