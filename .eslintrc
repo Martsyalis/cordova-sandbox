@@ -22,7 +22,8 @@
     "plugin:react/recommended"
   ],
   "globals": {
-    "process": false
+    "process": false,
+    "cordova": false
   },
   "rules": {
       "no-console": "warn",
