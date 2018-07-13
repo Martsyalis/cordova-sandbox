@@ -3,8 +3,6 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
-console.log('env is', Dotenv);
-
 const buildDir = 'docs';
 const path = `${__dirname}/${buildDir}`;
 
