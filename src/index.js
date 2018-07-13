@@ -4,6 +4,9 @@ import App from './components/App';
 
 
 function startApp() {
+  if(window.cordova){
+    window.open = cordova.InAppBrowser.open;
+  }
   ReactDOM.render(
     <App/>,
     document.getElementById('root')
@@ -11,6 +14,7 @@ function startApp() {
 }
 
 if(window.cordova) {
+
   document.addEventListener('deviceready', startApp, false);
 } else {
   startApp();

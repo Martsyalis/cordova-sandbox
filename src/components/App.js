@@ -36,7 +36,8 @@ export default class App extends PureComponent {
           <button onClick={this.handleGetToken}>Get Token</button>
           <Link to='/map'><button>Map</button></Link>
           <Link to='/gallery'><button>Gallery</button></Link>
-          <Link to='/imageUploader'><button>ImageUploader</button></Link>
+          <Link to='/image-uploader'><button>ImageUploader</button></Link>
+          <Link to='/pdf-viewer'><button>PDF Viewer</button></Link>
 
 
           <Routes />
