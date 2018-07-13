@@ -21,6 +21,9 @@
     "eslint:recommended",
     "plugin:react/recommended"
   ],
+  "globals": {
+    "process": false
+  },
   "rules": {
       "no-console": "warn",
       "indent": ["error", 2, { "SwitchCase": 1 }],

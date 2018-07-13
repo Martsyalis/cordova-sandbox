@@ -1,5 +1,9 @@
+/* eslint-env node */
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlPlugin = require('html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
+
+console.log('env is', Dotenv);
 
 const buildDir = 'docs';
 const path = `${__dirname}/${buildDir}`;
@@ -12,12 +16,13 @@ module.exports = {
   },
   devServer: {
     contentBase: `./${buildDir}`,
-    port: 3000,
+    port: 3005,
     compress: true,
     historyApiFallback: true
   },
   devtool: 'inline-source-map',
   plugins:[
+    new Dotenv(),
     new CleanWebpackPlugin(`${path}/bundle.*.js`),  //try [hash]
     new HtmlPlugin({ template: './src/index.html' })
   ],

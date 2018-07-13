@@ -47,10 +47,12 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
+    "dotenv-webpack": "^1.5.7",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-firebase-file-uploader": "^2.4.2",
+    "react-google-maps": "^9.4.5",
     "react-router-dom": "^4.3.1"
   }
 }
