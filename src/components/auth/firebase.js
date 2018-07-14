@@ -1,7 +1,7 @@
 import firebase from 'firebase';
 
 const config = {
-  apiKey: 'AIzaSyBJSZCkeTqcw0bQwOeLBxTDlzkgxaYYZ2E',
+  apiKey: process.env.FIREBASE_API_KEY,
   authDomain: 'sandbox-cordova.firebaseapp.com',
   databaseURL: 'https://sandbox-cordova.firebaseio.com',
   projectId: 'sandbox-cordova',
