@@ -17,8 +17,6 @@ import smallJpg from '../assets/small.jpg';
 import smallPng from '../assets/small.png';
 import icon from '../assets/icon.ico';
 
-import './Routes.css';
-
 const imageArray = [giantJpeg, giantPng, giantSvg, largeJpeg, largePng, smallJpg, smallPng, icon];
 
 class Routes extends PureComponent {

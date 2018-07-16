@@ -1,9 +1,0 @@
-.gallery {
-  display: flex;
-  flex-direction: column;
-}
-
-.gallery-image {
-  max-width: 400px;
-  object-fit: contain;
-}

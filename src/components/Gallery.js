@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import './Gallery.css';
 
 export default class Gallery extends PureComponent {
   static propTypes = {

@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import { HashRouter /* BrowserRouter */ as Router, Link } from 'react-router-dom';
 import Routes from './Routes';
-import './App.css';
 
 export default class App extends PureComponent {
 
